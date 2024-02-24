@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'cocFont'; /* Choose a name for your font */
+    src: url('supercell-magic.ttf') format('truetype'); /* URL to the font file */
+}
+
+h1{ /*Glavni text*/
+    font-family: 'cocFont';
+    font-size: 6vw;
+    text-align: center;
+    color: snow; /* Text color */
+    text-shadow: 
+        -5px -5px 0 #000,  
+        5px -5px 0 #000,
+        -5px 5px 0 #000,
+        5px 5px 0 #000; /* Apply shadows in each direction */
+        margin-bottom: 0vh;
+        z-index: 1;
+}
+
+body{/*Telo programa*/
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/background.jpg);
+}
+
+div{
+text-align: center;
+}
+
+.below-head-text{ /*Tekst ispod glavnog*/
+    font-family: 'cocFont';
+    font-size: 1.4vw;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    padding: 0.6% 1.5%; /* Add padding to the text */
+    display: inline-block; /* Make sure the background fills the entire text */
+    border-radius: 8px;
+    border-color: black;
+    border: 4px solid black;
+    margin-top: 1vh;
+}
+
+.hero-container{ /*Container za heroje*/
+    display: inline-flex;
+    margin-left: 26vw;
+    margin-top: 2vh;
+    justify-content: space-between;
+}
+
+.default-hero-box{ /*Kutijica za heroja*/
+    width: 8vw; /* Set the width of the box */
+    height: 8vw; /* Set the height of the box */
+    border: 5px solid #ac8f0e; /* Add a border around the box */
+    border-radius: 5%;
+    overflow: hidden; /* Hide any overflowing content */
+    background-color: #726a62;
+    margin-right: 4vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.default-hero-box img{ /*Slika unutar kutijice za heroja*/
+    align-items: center;
+    width: 100%; /* Make the image fill the entire width of the box */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Ensure the image behaves as a block element */
+}
+
+.gray-hero-box{ /*Nekliknuta kutijica za heroja*/
+    width: 8vw; /* Set the width of the box */
+    height: 8vw; /* Set the height of the box */
+    border: 5px solid #ac8f0e; /* Add a border around the box */
+    border-radius: 5%;
+    overflow: hidden; /* Hide any overflowing content */
+    background-color: #726a62;
+    margin-right: 4vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.gray-hero-box img{ /*Slika nekliknute kutijice za heroja*/
+    align-items: center;
+    width: 100%; /* Make the image fill the entire width of the box */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Ensure the image behaves as a block element */
+    opacity: 30%;
+}
+
+.below-container-text{ /*Tekst ispod heroja*/
+    font-family: 'cocFont';
+    font-size: 3.8vw;
+    text-align: center;
+    color: snow; /* Text color */
+    text-shadow: 
+        -2.5px -2.5px 0 #000,  
+        2.5px -2.5px 0 #000,
+        -2.5px 2.5px 0 #000,
+        2.5px 2.5px 0 #000;
+        margin-top: 9vh;
+        position: relative;
+        z-index: 0;
+}
+
+.main-content-container{ /*Prozor koji se napravi kada se klikne heroj*/
+    width:50vw;
+    height: 40vh;
+    background-color: #d4d7d4;
+    border: 5px solid #726a62;
+    flex-direction: row;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    margin-top: -9vh;
+    margin-left: 23.5vw;
+    padding: 0.5%;
+    flex-wrap: wrap;
+}
+
+.xsign-look{ /*X znak za zatvaranje prozora*/
+    height: 1.5vw;
+    width: 1.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url('images/iks.jpg');
+    background-color: #d4d7d4;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 47.5vw;
+    margin-top: 1vh;
+}
+
+.hero-name{ /*Ime heroja u prvom prozoru*/
+    font-family: 'cocFont';
+    font-size: 2vw;
+    text-align:center;
+    color: snow;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,
+        -1.5px 1.5px 0 #000,
+        1.5px 1.5px 0 #000;
+    display: inline-flex;
+}
+
+.equipment-box{ /*Kutijica za equipment slicice*/
+    width: 7vw;
+    height: 7vw;
+    border: 5px solid #2685f0;
+    border-radius: 5%;
+    background-color: snow;
+    overflow: hidden;
+    margin-top: 3vh;
+    display: inline-block;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.equipment-box img{ /*Slika unutar kutijice za equipment slicice*/
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    display: block;
+}
+
+.equipment-name{ /*Naziv equipmenta u prozoru za equipment*/
+    font-family: 'cocFont';
+    font-size: 2vw;
+    color: snow;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,
+        -1.5px 1.5px 0 #000,
+        1.5px 1.5px 0 #000;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 12vw;
+}
+
+.input-box-from { /*Kutijica za input pocetnog levela*/
+    position: absolute;
+    top: 10.5vh;
+    left: 22.5vw;
+    width: 3vw;
+    height: 4vh;
+    border-radius: 4px;
+}
+
+.input-box-to { /*Kutijica za input krajnjeg levela*/
+    position: absolute;
+    top: 10.5vh;
+    left: 35vw;
+    width: 3vw;
+    height: 4vh;
+    border-radius: 4px;
+}
+
+.from-level-label{ /*Label za 'From level' text*/
+    position: absolute;
+    font-family: 'cocFont';
+    font-size: 1.5vw;
+    margin-left: 12vw;
+    margin-top: 11vh;
+}
+
+.to-level-label{ /*Label za 'to level' text*/
+    position: absolute;
+    font-family: 'cocFont';
+    font-size: 1.5vw;
+    margin-left: 27vw;
+    margin-top: 11vh;
+}
+
+.upgrade-button{ /*Upgrade dugme*/
+    width: 9vw;
+    height: 100%;
+    max-height: 5vh;
+    background-image: url(images/upgrade_button.jpg);
+    position: absolute;
+    background-size: 100%;
+    background-position: center;
+    overflow: visible;
+    background-repeat: no-repeat;
+    margin-top: 9.5vh;
+    margin-left: 40vw;
+    cursor: pointer;
+}
+
+.ore-box { /*Kutijica za ore-ove*/
+    position: absolute;
+        margin-top: 33vh;
+        width: 3.3vw;
+        height: 3.3vw;
+        background-color: #d4d7d4;
+        margin-left: 4vw;
+        background-size: cover;
+        overflow:visible;
+        background-repeat: no-repeat;
+        z-index: 2;
+    
+}
+
+.ore-value-label{/*Vrednost ore-ova*/
+font-family: 'cocFont';
+position: absolute;
+margin-top: 35vh;
+font-size: 1.8vw;
+}
